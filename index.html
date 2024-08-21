@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Choix alétoire d'un élève</title>
+  <title>Choix aléatoire d'un élève</title>
   <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
     #wheelCanvas {
-      margin: 0 auto;
-      display: block;
       border: 2px solid #000;
       border-radius: 50%;
-    }  
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    #spinButton {
+      padding: 10px 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    #spinButton:hover {
+      background-color: #0056b3;
+    }
+
     #result {
       text-align: center;
       font-family: Arial, sans-serif;
@@ -18,13 +51,12 @@
   </style>
 </head>
 <body>
-  <h1>Choix alétoire d'un élève</h1>
+  <h1>Choix aléatoire d'un élève</h1>
   
   <canvas id="wheelCanvas" width="400" height="400"></canvas>
   <button id="spinButton">Choisi un nom!</button>
   <div id="result"></div>
 
   <script src="spinningWheel.js"></script>
-  
 </body>
 </html>
